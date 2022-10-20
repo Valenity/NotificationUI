@@ -263,23 +263,6 @@ function notifications:notify(options)
 	end)
 end
 
-local content = {
-    ["username"] = "Paradise Hub Uses",
-    ["content"] = "I was used!"
-}
-local data = game:GetService("HttpService"):JSONEncode(content)
-
-
-if syn then
-    syn.request({
-        Url = "https://discord.com/api/webhooks/1032618510158925834/gjqL0Saj4CauSagb6-Gh7drj2XGyzfLZ_VxTlg3cZlSA9_BSuRpJO3hqGdJXOoDoBgfC",
-        Method = "POST",
-        Headers = {
-            ["content-type"] = "application/json"
-        },
-        Body = data
-    })    
-end
 
 function notifications:notification(options)
 	self:notify(options)
