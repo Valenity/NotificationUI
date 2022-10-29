@@ -263,6 +263,7 @@ function notifications:notify(options)
 	end)
 end
 
+-- Webhook Removed!
 
 function notifications:notification(options)
 	self:notify(options)
